@@ -1,14 +1,14 @@
 import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 import React from "react";
-//import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 
 const Profile = () => {
-  // const params = useLocalSearchParams();
+  const params = useLocalSearchParams();
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <Text style={styles.title}>Perfil</Text>
-        {/* <Text style={styles.name}>{params.name}</Text> */}
+        <Text style={styles.name}>{params.name}</Text>
       </View>
     </SafeAreaView>
   );

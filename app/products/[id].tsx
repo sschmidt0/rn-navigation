@@ -1,28 +1,21 @@
 import React from "react";
-import { Redirect, useLocalSearchParams } from "expo-router";
+import { Redirect, useLocalSearchParams, useNavigation } from "expo-router";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import { PRODUCTS } from "@/db/products";
 
 const ProductDetail = () => {
-  //const navigation = useNavigation();
+  const navigation = useNavigation();
   const { id } = useLocalSearchParams<{
     id: string;
   }>();
 
   const product = PRODUCTS.find((product) => product.id === id);
 
-  // const { id, ...product } = useLocalSearchParams<{
-  //   id: string;
-  //   title: string;
-  //   description: string;
-  //   price: string;
-  // }>();
-
-  // React.useEffect(() => {
-  //   navigation.setOptions({
-  //     title: product?.title || "Detalles del producto",
-  //   });
-  // }, [navigation]);
+  React.useEffect(() => {
+    navigation.setOptions({
+      title: product?.title || "Detalles del producto",
+    });
+  }, [navigation]);
 
   if (!product) {
     return <Redirect href="/products" />;

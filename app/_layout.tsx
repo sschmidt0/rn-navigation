@@ -8,15 +8,18 @@ const RootLayout = () => {
 // const RootLayout = () => {
 //   return (
 //     <Stack
-//       screenOptions={{
-//         headerStyle: {
-//           backgroundColor: "#f4511e",
-//         },
-//         headerTintColor: "#fff",
-//         headerTitleStyle: {
-//           fontWeight: "bold",
-//         },
-//       }}
+//       screenOptions={
+//         {
+//           // headerStyle: {
+//           //   backgroundColor: "#f4511e",
+//           // },
+//           // headerTintColor: "#fff",
+//           // headerTitleStyle: {
+//           //   fontWeight: "bold",
+//           // },
+//           // title: "React Native con Expo Router",
+//         }
+//       }
 //     >
 //       <Stack.Screen name="index" options={{ headerShown: true }} />
 //       <Stack.Screen name="settings" options={{ title: "Ajustes" }} />
